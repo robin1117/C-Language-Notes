@@ -1,5 +1,5 @@
- Based on the number of Operand Operators can handled, it can be classify in to 3 categories : -
-  ==Every Operator have Some value Output==
+Based on the number of Operand Operators can handled, it can be classify in to 3 categories : -
+==Every Operator have Some value Output==
  - Unary - works over 1 operand
  - Binary - works over 2 operand
  - Ternary - works over 3 operand

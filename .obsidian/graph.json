@@ -5,13 +5,27 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
+  "collapse-color-groups": false,
   "colorGroups": [
     {
       "query": "tag:#DataType_Operators  ",
       "color": {
         "a": 1,
         "rgb": 5111658
+      }
+    },
+    {
+      "query": "tag:#controlFlowStatement  ",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
+      }
+    },
+    {
+      "query": "tag:#functonAndStorageClasses  ",
+      "color": {
+        "a": 1,
+        "rgb": 15597823
       }
     }
   ],
@@ -21,10 +35,10 @@
   "nodeSizeMultiplier": 1.9375,
   "lineSizeMultiplier": 3.44322916666667,
   "collapse-forces": false,
-  "centerStrength": 0.302083333333333,
-  "repelStrength": 10.5208333333333,
-  "linkStrength": 1,
+  "centerStrength": 0.114583333333333,
+  "repelStrength": 6.5625,
+  "linkStrength": 0.848958333333333,
   "linkDistance": 248,
-  "scale": 0.47888815587391365,
-  "close": false
+  "scale": 0.47888815587391453,
+  "close": true
 }

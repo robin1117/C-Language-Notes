@@ -10,7 +10,9 @@ For that C -Language Provides CFS 🥲
 | if-else              | While                              | break           |
 | if else-if else      | do-While                           | exit            |
 | if - else if         |                                    | return          |
-
+| Switch Statement     |                                    |                 |
+- If you want to how actually `\t` works, for that first you need to know how  [[Output Screen]] was divided into parts in C language !
+- After Knowing CFS its becoming better to solve [[Some Mathematical Programs]]
 ### <font color="#fac08f">Selection Statements </font>allows programmer to select those specific statements from our whole program. that programmer wants to executes based on some conditions only rather than executing all statement in once which is Default flow.
 
 ```C
@@ -168,7 +170,7 @@ large = (a>b && a>c && a>d)? a : (b>c b>d)? b : (c>d)? c : d ;
 
 ### <font color="#fac08f">Iterative or Repeatitive Statements </font> Allow the programmer to Execute a Piece of code for the multiple times like for 100 or more times, Based on some Condition until the condition will not becomes false .
 
-Syntax of for-loop : :
+#### <font color="#00b050">Syntax of for-loop : :</font>
 ```C
 for( expression1 ; expression2 ; expression3 ){
 //code
@@ -299,7 +301,7 @@ printf("Robin"); //no. of times this print ?
 - k `< =` `log(n)` / `log(2)`
 - k `< =` log<sub>2</sub>(n)
 -  k `=`  `floor`(log<sub>2</sub>(n))
-- So, `Printf()` Runs for `floor`(log<sub>2</sub>(n)) + 1
+- So, `Printf()` Runs for {`floor`(log<sub>2</sub>(n)) } + 1 
 
 Let`s` Understand Little about<font color="#ffc000"> Nested for loop</font>
 
@@ -348,6 +350,154 @@ for(i = 2; i<=n; i=i*2)
 <font color="#ffc000">Whatever till we study are known as Independent Nested Loop.  !</font>
 Now we study about the possible categories <font color="#d99694">Dependent Nested Loop</font>
 
+```C
+for(i = 1; i<=n; i++)
+{
+  for(j = i; j<=2*i; j++)
+  {
+  printf("Robin");
+  }
+}
+```
+
+If  we want to count how many times the above `Printf("Robin")` executes then here we will have to use <font color="#953734">Loop Unfolding </font>Method -
+
+| `i=1`     | `i=2`        | `i=3`        | `i = n`       |
+| --------- | ------------ | ------------ | ------------- |
+| `j = 1,2` | `j = 2 to 4` | `j = 3 to 9` | `j = n to 2n` |
+| 2-time    | 3-times      | 7times       | (n+1)times    |
+Using Formula : S<sub>n</sub> = `n/2 ( First-Term + Last-term )`
+- First Term = 2
+- Last Term = (n+1)
+So according to Formula : S<sub>n</sub> = n/2 ( 2 + (n+1) )
+-  S<sub>n</sub> = `n/2 ( n+3 )` Answer value is depends on `n`
+- if `n = 1` S<sub>1</sub> = `1/2 (1+3)` = `1/2 (4)` = `2` times
+
+<font color="#ffc000">Another Example -</font>
+```C
+for(i = 1; i<=n; i++)
+{
+  for(j = i; j<=3*i; j++)
+  {
+  printf("Robin");
+  }
+}
+```
+
+| `i=1`       | `i=2`        | `i=3`        | `i = n`       |
+| ----------- | ------------ | ------------ | ------------- |
+| `j = 1,2,3` | `j = 2 to 6` | `j = 3 to 9` | `j = n to 3n` |
+| 3-time      | 5-times      | 7times       | (2n+1)times   |
+Using Formula : S<sub>n</sub> = `n/2 ( First-Term + Last-term )`
+- First-Term = 3
+- Lats-Term = (2n+1)
+So according to Formula : S<sub>n</sub> = `n/2 (3 + (2n+1))`
+- S<sub>n</sub> = `n/2 ( 2n+4 )`
+If `n = 2` S<sub>2</sub> = `2/2 ( (2)2 + 4 )`
+- S<sub>2</sub> = 8 Times
+
+
+<font color="#ffc000">Another Example -</font>
+```C
+for(i = 1; i<=n; i=i*3)
+{
+  for(j = i; j<=n; j++)
+  {
+  printf("Robin");
+  }
+}
+```
+
+| `i=`3<sup>0</sup>     | `i=`3<sup>1</sup>     | `i=`3<sup>2</sup>     | `i=`3<sup>3</sup>     | `i=`3<sup>4</sup>     | `i=`3<sup>k</sup>     |
+| --------------------- | --------------------- | --------------------- | --------------------- | --------------------- | --------------------- |
+| j = 3<sup>0</sup> - n | j = 3<sup>1</sup> - n | j = 3<sup>2</sup> - n | j = 3<sup>3</sup> - n | j = 3<sup>4</sup> - n | j = 3<sup>k</sup> - n |
+| n - 3<sup>0</sup> +1  | n - 3<sup>1</sup> +1  | n - 3<sup>2</sup> +1  | n - 3<sup>3</sup> +1  | n - 3<sup>4</sup> +1  | n - 3<sup>k</sup> +1  |
+- (n - 3<sup>0</sup> +1) + (n - 3<sup>1</sup> +1) +(n - 3<sup>2</sup> +1) +(n - 3<sup>3</sup> +1) +(n - 3<sup>4</sup> +1) -----------------------+(n - 3<sup>k</sup> +1)
+- (n+1)(k+1) {   -3<sup>0</sup> + -3<sup>1</sup> + -3<sup>2</sup> + -3<sup>3</sup> + -3<sup>4</sup> ------------------+ -3<sup>k</sup> }
+-  By using GP Formula : a = 3<sup>0</sup> , r = 3 , Terms = k+1 
+- S<sub>Terms</sub> = a ( r<sup>Terms</sup> - a) / ( r  - a )
+- S<sub>k+1</sub> = 3<sup>0</sup> ( 3<sup>k+1</sup> - 3<sup>0</sup> ) / 3 - 3<sup>0</sup>
+- S<sub>k+1</sub> = 1 ( 3<sup>k+1</sup> - 1 ) / 2
+Solving for Value k :
+- 3<sup>k</sup> <= n
+- taking log both side
+- log(3<sup>k</sup>) <= log(n)
+- k log(3) <=log(n)
+- k = log(n) / log(3)
+- k = log<sub>3</sub> (n)
+
+#### <font color="#00b050">Syntax of While ( ) : :</font> 
+```C
+While(expression / condtion){ //expression is madatory else erro
+s1;
+s2;
+}
+// While loop executes again and again until Express not becomes False:
+```
+
+```C
+int i = 1;
+While( ++i < 5 ){
+printf("%d",i); //2 3 4
+}
+```
+
+```C
+int i = 1;
+While( ++i < 5 );
+printf("%d",i); // 5
+```
+#### <font color="#00b050">Syntax of do_While ( ) : :</font>
+```C
+Do{
+printf("Robin");
+} While(0); //It executes atleast 1 times
+```
+
+### <font color="#f79646">Jump Statements</font> allows the programmer skip one or all iteration of loops . Jump statements (like `break`, `continue`, `goto`, `return`) in programming languages are used to alter the normal sequential execution flow of a program, effectively transferring control from one part of the code to another.
+
+- `break`: Terminates the loop entirely and transfers control to the statement immediately following the loop.
+- `continue`: Skips the current iteration of the loop and proceeds to the next one.
+- `goto`: Transfers control to a labeled statement within the same function.
+- `return`: Exits a function and returns a value (if defined) to the caller.
+
+#### <font color="#92d050">keywords : : </font>
+- Keywords are the reserved words in any programming language, each keywords have there specific meaning and its unchangeable as programmer. we can not use these keyword by there own purpose -
+- <font color="#00b0f0">Switch</font> is also one of the Keywords used to create Selection Statement with multiple choices
+- Multiple Choices are provided with another keyword <font color="#00b0f0">case :</font>
+
+syntax of Switch :
+```C
+// switch() selectes an appropriate case by comparing expression and Constant.
+Switch(expression){ 
+case Constant : //Block of Statement
+  break;
+case Constant : //Block of Statement
+  break;
+default : //Block of Code
+  break;
+}
+```
+
+- Break is Optional.
+- Expression evaluated to a int value
+- position of default does not matter, it can be anywhere
+- default is optional
+- Duplicate case labels are not allowed
+- case label cannot be a variable
+- range  => case `low-value  . . .  high-value` (not on all compilers)
+
+if we want to executes same code for some set of values 
+```C
+Switch(){
+Case 1 : 
+Case 13 : 
+Case 18 : printf("1");
+          break;
+}
+```
 ### <font color="#ffc000">Garbage Value </font> 
 By declaring a Variable we are just label a memory location with that identifier name, and this memory location may already contains some data if the programmer not initialize variable explicitly. then that previously resides data is known as Garbage Value for The variable 
 
+
+#controlFlowStatement

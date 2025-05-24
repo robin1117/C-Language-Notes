@@ -1,4 +1,4 @@
-We know that in <font color="#fac08f">char</font> type variable we can store one character at a time, it can any symbol like - `@`,`#`,`$`  etc
+We know that in <font color="#fac08f">char</font> type variable we can store one character at a time, it can be of any symbol like - `@`,`#`,`$`  etc
 
 we come to in biggest confusion, when you notice Range of <font color="#fac08f">char data-type</font> . actually 1 Byte <font color="#fac08f">char</font> can hold single symbol then how the range of char is possible , I mean how range is possible here ? because its just hold a symbol not any integer !
 - `sign char` - 1Bytes = 8bit

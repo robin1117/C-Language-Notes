@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "cb013baae8f3c5b0",
+        "id": "1ef7b0b38512492e",
         "type": "tabs",
         "children": [
           {
-            "id": "f24dde560df38e39",
+            "id": "b92d97865bdc7593",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Control Flow Statement.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Control Flow Statement"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -53,8 +49,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
-                "matchingCase": true,
+                "query": "tag:#function_Storage_Classes",
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -78,7 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 303.5
+    "width": 200
   },
   "right": {
     "id": "d92bde04a96c0ffe",
@@ -165,32 +161,46 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f24dde560df38e39",
+  "active": "b92d97865bdc7593",
   "lastOpenFiles": [
+    "Output Screen.md",
+    "Arrays and Pointers.md",
+    "Programming Language.md",
     "Range as Cyclic Property.md",
-    "AP nth term.png",
-    "Floating Point Representation/Number System.md",
-    "Number-System.md",
-    "Floating Point Representation",
+    "Untitled.canvas",
+    "Untitled 1.canvas",
+    "Tower of hanoi(Puzzle).md",
+    "Recursion.md",
+    "Primitive Data-Type.md",
+    "Fibonacii Series.md",
+    "Storage Class.md",
+    "Function.md",
+    "Stash/AP nth term.png",
+    "Stash/Memory Layout Diagram.png",
+    "Stash/TOH with Recursion.png",
+    "Stash/TOH.gif",
+    "toh3byGrasshopperForGFG.mp4",
+    "Variables & Data-Types.md",
     "ASCII-CS.md",
     "Operators.md",
-    "Programming Language.md",
-    "printf().md",
-    "Control Flow Statement.md",
-    "Cyclic Property.png",
-    "Translator Program.png",
-    "Variables & Data-Types.md",
-    "GP Formula 2.png",
-    "Number line.png",
-    "GP formula.png",
-    "Primitive Data-Type.md",
     "Sizeof() Operator.md",
+    "Control Flow Statement.md",
+    "printf().md",
+    "Some Mathematical Programs.md",
+    "Stash/ProgramExecution.drawio.svg",
+    "Number-System.md",
+    "Stash/Cyclic Property.png",
+    "Stash",
+    "New folder",
+    "Stash/Translator Program.png",
+    "Stash/GP formula.png",
+    "Stash/GP Formula 2.png",
+    "Floating Point Representation/Number System.md",
+    "Floating Point Representation",
     "Selection Statements.md",
     "Interger(int).md",
-    "Untitled.canvas",
     "Pasted image 20250301111138.png.~tmp",
     "Pasted image 20250227081151.png.md",
-    "Pasted image 20250227080738.png",
     "Welcome.md",
     "create a link.md"
   ]

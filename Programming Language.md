@@ -88,5 +88,6 @@ getch();
 
 #### [[Sizeof() Operator]]
 
+#### Now its Time to Understand What and How to Use Functions in C Language ?
 
 #DataType_Operators
