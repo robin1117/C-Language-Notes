@@ -1,6 +1,6 @@
 #functonAndStorageClasses
 These are the 4 important things that Storage Class taught about variables~
-- <font color="#c0504d">Scope</font> : in program scope is a prat of code in which the variable is accessible.
+- <font color="#c0504d">Scope</font> : in program scope is a part of code in which the variable is accessible.
      - <font color="#d99694">File Scope</font> of a variable means we can access that variable any where inside the file (Global-Scope).
      - <font color="#d99694">Block-Level-Scope</font> means when that variable is accessible  with in the block only (Local Variable). 
 - <font color="#ffc000">life time</font> : its time span/Duration in which it is available(alive or active) in the program.

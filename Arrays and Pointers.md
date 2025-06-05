@@ -1,8 +1,8 @@
 As a beginner in CS, most of the students find this topic very hard, but I would like to tell you this is the easiest topic in this world. This why because Students make this topic difficult themselves.
 
 ### <font color="#92d050">Address</font>
-Let`s`  first we talk about Address ! in real world .
-Basically Address is of types - 
+Let`s`  first we talk about Addresses ! in real world .
+Basically Address is of two types - 
 - <font color="#00b0f0">Absolute Address</font>
      - we can understand <font color="#00b0f0">Absolute address</font> in such a way, suppose your House address is `Street no 1, Kirti Nagar Bhiwani Harayna 127021, India` this is kind of Absolute address, because with this address anyone in this world can be reaches to my house
      - <font color="#00b0f0">Absolute address</font> is kind of root address
@@ -58,7 +58,7 @@ The way we can declare Arrays -
 ✅`int a[size]`
     -  Array size can be unsigned integer greater than zero
 
-### Some Important points about Array in C
+### Some Important points about Array in C : :
 - Collection of same type of element.
 - Element are Stored in Sequence one after another.
 - Internally Array Name is a Constant Pointer.
@@ -67,7 +67,7 @@ The way we can declare Arrays -
 - Normal variable `int a = {1}`
 - Array name cannot be L value of any assignment Statement. as it representing address of the first element of array.
 
-### Playing with Address in Arrays :
+### Playing with Address in Arrays : :
 - We know that Array name refers to the address of the first element that Array.
 - If `a` is the name of array then `&a` will revers to the address of whole array
 
@@ -134,5 +134,104 @@ printf("%d",a+1); //1004
 printf("%d",&a +1); //1020
 printf("%d",*(a+1)); //20
 ```
+❌ Invalid `int 4[a] = {10,20,30,40};`❌
 
 ### 2D - Arrays : :
+Till now you were studied lot of about 1D array , but the interesting thing in C is you can make 2D and 3D arrays have you here about 2D or 3D arrays before ?
+
+<font color="#f79646">Visually 2D arrays is something look like -</font>
+![[2D arrays.svg| 700]]
+
+- `int a[2][3]`
+- `&a` = Address of whole array 24 bytes
+- `a` = `&a[0]` - - Here `a` represents  address of `a[0]`
+- `a[0]` = `&a[0][0]`
+
+<font color="#00b050">Example -</font>
+```C
+int a[2][3] = {10, 20, 30, 40, 50, 60};
+printf("%u",a); //1000 12bytes Address of a[0] array
+printf("%u",a[0]); //1000 4bytes Address of a[0][0] element
+printf("%u",&a); //1000 24Bytes Address of whole array
+```
+
+<font color="#00b050">Example -</font>
+```C
+int a[2][3] = {10, 20, 30, 40, 50, 60};
+printf("%u",a[0]+1); //1004
+printf("%u",a+1); //1012 
+printf("%u",&a+1); //1024
+```
+
+<font color="#00b050">Example -</font>
+```C
+int a[3][4] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130};
+printf("%u",a) //1000 16bytes
+printf("%u",&a) //1000 48bytes
+printf("%u",a[0]) //1000 4bytes
+printf("%u",&a[0][0]) //1000 4bytes
+printf("%u",*a) //1000 4bytes
+printf("%u",**a) //10
+printf("%u",a+1) //1016 16bytes
+printf("%u",*a+1) //1004 4bytes
+printf("%u",a[0]+1) //1004 4bytes
+```
+
+<font color="#ffff00">For 2D Arrays </font>🔥
+- `*(a[0]+1) = a[0][1]`=== `*(a[1]+1) = a[1][1]`
+-  `*(a[0]+j) = a[0][j]`=== `*(a[i]+2) = a[i][2]`
+- `*(a[i]+j) = a[i][j]` = `*(*(a+i) + j)`
+
+
+### 3D Arrays : :
+Similarly we can make and understand 3D arrays as we understand 2D. Let`s` Understand it by example.
+<font color="#f79646">Visually 3D arrays is something look like -</font>
+![[3D array.svg|700]]
+
+<font color="#00b050">Example -</font>
+```C
+int a[2][3][2] = {1,2,3,4,5,6,7,8,9,10,11,12}
+printf("%u",a) //1000 24bytes
+printf("%u",a[0]) //1000 8bytes
+printf("%u",a[0][0]) //1000 4bytes
+printf("%u",&a) //1000 48bytes
+printf("%u",a+1) //1024 24bytes
+printf("%u",a[0]+1) //1008 8bytes
+printf("%u",a[0][0]+1) //1004 4bytes
+printf("%u",&a+1) //1048
+printf("%u",a[0][0][0]+1) //2
+```
+
+<font color="#00b050">Example -</font>
+```C
+int a[3][2][3] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18}
+printf("%u",a); //1000 24bytes
+printf("%u",&a); //1000 72bytes
+printf("%u",a[0]); //1000 8bytes
+printf("%u",a[0][0]); //1000 4bytes
+printf("%u",a+1); //1024 
+printf("%u",&a+1); //1072
+printf("%u",a[0]+1); //1012
+printf("%u",a[0][0]+1); //1004
+printf("%u",a[0][0][0]+1); //2
+printf("%u",*a); //1000 8bytes
+printf("%u",**a); //1000 4bytes
+printf("%u",***a); //1
+printf("%u",*a+1); //1008 
+printf("%u",**a+1); //1004
+```
+
+#### Declaration & Initialization of Array : :
+If only Declaration is there without initialization it is mandatory to provide the size of each dimension of array .
+- `int a[][]` ❌
+- `int a[][10]` ❌
+- `int a[2][2]` ✅
+in case , we are initializing the array, there is flexibility that you can omit the size of <font color="#fac08f">1st dimension</font> no other dimension is having such flexibility
+- `int a[][] = {1,2,3,4}`❌
+- `int a[][3] = {1,2,3,4}`✅
+- `int a[2][] = {1,2,3,4,5}`❌
+- `int a[2][3] = {1,2,3,4,5,6}`✅
+
+Practice these Examples and now let`s` we move ahead and learn about [[pointers]]
+
+#Arrays_Pointer
