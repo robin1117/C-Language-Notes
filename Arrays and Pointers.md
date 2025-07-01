@@ -234,4 +234,9 @@ in case , we are initializing the array, there is flexibility that you can omit 
 
 Practice these Examples and now let`s` we move ahead and learn about [[pointers]]
 
+We knows If we declare an array then we have to provides its size to compiler in advance. array size will be decided at<font color="#fac08f"> compile time,</font> and array size can not be changed throughout the program during runtime.
+You can not grow or shirk the array once you declare its size that is the<font color="#c00000"> problem with Array.</font>
+<font color="#ffff00">If we want to modified its size during Runtime we should go for DMA</font>
+[[Dynamic Memory Allocation]]
+
 #Arrays_Pointer
